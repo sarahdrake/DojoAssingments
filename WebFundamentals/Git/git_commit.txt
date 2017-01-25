@@ -19,10 +19,12 @@ esc
 git add aboutME.txt
 git commit -m "added favorite movie to aboutME"
 git log
+git revert -n HEAD
 vi aboutME.txt
 s
 esc
 :w
 :q
+git status
 git add aboutME.txt
-git commit -m "Final commit aboutME"
+git commit -m "reverted and changed the entire file"

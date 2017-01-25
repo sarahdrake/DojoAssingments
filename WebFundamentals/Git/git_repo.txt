@@ -1,0 +1,17 @@
+cd DojoAssingments
+git init
+git add .
+git commit -m "Pushing DojoAssingments"
+git remote add origin https://github.com/sarahdrake/DojoAssingments.git
+git push -u origin master
+touch readme.md
+vi readme.md
+s
+esc
+:w
+:q
+git status
+git add readme.md
+git commit -m "added readme"
+git remote add origin https://github.com/sarahdrake/DojoAssingments.git
+git push -u origin master
