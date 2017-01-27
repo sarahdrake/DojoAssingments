@@ -1,0 +1,158 @@
+* {
+  font-family: sans-serif;
+}
+.wrapper {
+  width: 980px;
+  height: 1400px;
+}
+.header {
+  width: 980px;
+  background-color: #EEF2EC;
+}
+.header p {
+  display: inline-block;
+  width: 410px;
+  vertical-align: top;
+  margin-left: 400px;
+  font-size: 20px;
+}
+.navigation-bar {
+  width: 980px;
+  display: inline-block;
+  vertical-align: top;
+}
+.navigation-bar li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 116px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: -5px;
+  margin-top: -15px;
+  background-color: #EEF2EC;
+}
+.main-content {
+  background-color: #3C2E4E;
+  margin-top: -12px;
+  height: 850px;
+}
+.main-content-top img {
+  border: 10px solid grey;
+  margin: 5px;
+  display: inline-block;
+}
+.main-content-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 430px;
+  height: 295px;
+  margin-top: 10px;
+  background-color: #D2CCD2;
+  padding: 5px;
+}
+.main-content-right h1 {
+  font-size: 18px;
+  font-weight: 900;
+}
+.main-content-right h2 {
+  font-size: 16px;
+}
+.main-content-right p {
+  font-size: 14px;
+}
+.main-content-bottom {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 970px;
+}
+.storage {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  width:220px;
+  background-color: #B4BEC9;
+  height: 488px;
+  position: relative;
+}
+.storage h1{
+  font-size: 20px;
+  vertical-align: top;
+  padding-left: 5px;
+}
+.storage p {
+  padding: 5px;
+  font-size: 14px;
+
+}
+.searching {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  width: 220px;
+  background-color: #B4BEC9;
+  height: 488px;
+  position: relative;
+
+}
+.searching h1 {
+  font-size: 20px;
+  vertical-align: top;
+  padding-left: 5px;
+}
+.searching p {
+  padding: 5px;
+  font-size: 14px;
+}
+.interaction {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  width: 220px;
+  background-color: #B4BEC9;
+  height: 488px;
+  position: relative;
+
+}
+.interaction h1 {
+  font-size: 20px;
+  vertical-align: top;
+  padding-left: 5px;
+}
+.interaction p {
+  padding: 5px;
+  font-size: 14px;
+}
+.companies {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  width: 220px;
+  background-color: #B4BEC9;
+  height: 488px;
+  position: relative;
+
+}
+.companies h1 {
+  font-size: 20px;
+  vertical-align: top;
+  padding-left: 5px;
+}
+.companies p{
+  padding: 5px;
+  font-size: 14px;
+}
+button {
+  width: 90px;
+  height: 30px;
+  margin-left: 110px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background-color: #8DA0C4;
+  color: white;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+}
