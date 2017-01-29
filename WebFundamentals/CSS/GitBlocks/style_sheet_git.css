@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Courier New, monospace;
+}
+span {
+  color: #3FB0AC;
+}
+.wrapper {
+  width: 1000px;
+  background-color: #DDDFD4;
+}
+.header {
+  display: inline-block;
+  background-color: #3FB0AC;
+  box-sizing: border-box;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+.header h1 {
+  width: 320px;
+  padding-left: 20px;
+  display: inline-block;
+}
+.header ul {
+  display: inline-block;
+  margin-left: 315px;
+  position: relative;
+  bottom: 30px;
+}
+.header li {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 13px;
+}
+.header a{
+  color: white;
+}
+.main-content {
+  background-color: #FAE596;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 10px;
+}
+.side-panel {
+  width: 220px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #173F43;
+  margin: 20px;
+  display: inline-block;
+}
+.git-command-boxes {
+  display: inline-block;
+  width: 700px;
+  vertical-align: top;
+}
+h2 {
+  font-size: 20px;
+  color: #D5D8CE;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 14px;
+  color: #D5D8CE;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
+}
+.main-row-1 {
+  display: inline-block;
+  vertical-align: top;
+
+}
+.main-row-1 ul {
+  display: inline-block;
+  width: 180px;
+  height: 173px;
+  box-sizing: border-box;
+  vertical-align: top;
+  padding: 15px;
+  background-color: #173F43;
+  margin: 20px;
+
+}
+.main-row-1 li {
+  display: inline-block;
+  font-size: 14px;
+  color: #D5D8CE;
+}
+h3 {
+  font-size: 18px;
+  color: #D5D8CE;
+  margin-bottom: 10px;
+}
+.main-row-2 {
+  display: inline-block;
+}
+.main-row-2 ul {
+  display: inline-block;
+  width: 270px;
+  box-sizing: border-box;
+  height: 183px;
+  padding: 15px;
+  background-color: #173F43;
+  margin: 20px;
+
+}
+
+.main-row-2 li {
+  display: inline-block;
+  height: 100px;
+  font-size: 14px;
+  color: #D5D8CE;
+  margin-bottom: -60px;
+}
+.main-row-3 {
+  display: inline-block;
+  width: 700px;
+}
+.main-row-3 ul {
+  display: inline-block;
+  width: 650px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #173F43;
+  margin: 20px;
+  list-style-type: none;
+}
+.main-row-3 li {
+  font-size: 14px;
+  color: #D5D8CE;
+}
+.footer {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 970px;
+  height: 50px;
+  margin: 10px;
+  padding-top: 15px;
+  background-color: #3FB0AC;
+  text-align: center;
+}
+.footer p{
+  color: black;
+}
