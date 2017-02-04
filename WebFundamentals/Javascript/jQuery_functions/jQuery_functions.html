@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions!</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $("a").click(function(){
+            $(this).hide();
+          });
+          $("#addclass").click(function(){
+            $("p").first().addClass("highlight");
+
+          });
+          $("#slidebutton").click(function(){
+            $("#slideimg").slideToggle("slow", function(){
+            });
+          });
+
+          $(".append").click(function(){
+            $(this).append("<p>Can you understand any of this?</p>");
+          });
+
+          $(".pslideup").click(function(){
+            $(this).slideUp();
+          });
+          $("#showbutton").click(function(){
+            $("#showimg").show("slow");
+          });
+          $("#togglebutton").click(function(){
+            $("#toggleimg").toggle("fast", function(){
+
+            });
+          });
+          $("#slideup").click(function(){
+            $(".slideup").slideUp();
+          });
+
+          $("#slidedown").click(function(){
+            $(".slidedown").slideDown(); {
+            });
+          });
+          $("#fadein").click(function() {
+            $("#cake").fadeIn();
+          });
+          $("#before").click(function(){
+            $(".before").before("<p>But first </p>");
+          });
+
+
+
+
+
+        });
+    </script>
+  </head>
+  <style>
+    .content {
+      width: 1200px;
+    }
+    .row {
+      display: block;
+      height: 200px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+      padding-top: 50px;
+
+    }
+    .line {
+      height: 1px;
+      background: #EBEBEB;
+      border-bottom: 1px solid #313030;
+    }
+    input {
+      height: 100px;
+      width: 200px;
+
+    }
+    #slideimg {
+      position: relative;
+      left: 400px;
+      bottom: 100px;
+    }
+    #slidebutton {
+      position: relative;
+      bottom: 150px;
+      left: 200px;
+    }
+    .highlight {
+      background: red;
+    }
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="row">
+          <h1>addClass</h1>
+          <h2>Click the button to add a class 'red' to this paragraph</h2>
+          <input id="addclass" type="button" name="addClass" value="addClass">
+          <p>Lorem ipsum dolor sit amet, ignota fierent noluisse pro ea. Unum mucius sed an, quod omnium an sed. Cum alia stet dicam ne, vero saepe eu mel. Eu his vidit labores persecuti. Dolores expetenda cum ex, ad platonem tractatos necessitatibus vim.</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>slideToggle</h1>
+          <h2>Click the button to slideToggle an image</h2>
+          <input id="slidebutton" type="button" name="Slidetoggle" value="Slidetoggle">
+          <img id="slideimg" src="AW9A1494.jpg" alt="sarah" height="200" width="400">
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>append</h1>
+          <h2>Click the text to append a new paragraph</h2>
+          <p class="append"> Lorem ipsum dolor sit amet, ignota fierent noluisse pro ea. Unum mucius sed an, quod omnium an sed. Cum alia stet dicam ne, vero saepe eu mel. Eu his vidit labores persecuti. Dolores expetenda cum ex, ad platonem tractatos necessitatibus vim.</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>SlideUp</h1>
+          <h2>Click the text to see it slide up</h2>
+            <p class="pslideup">Click me</p>
+            <p class="pslideup">Now you see me</p>
+            <p class="pslideup">Now you don't</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>hide</h1>
+          <h2>Click the link to hide it</h2>
+          <a href="#">Click me to play hide and seek</a>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>show</h1>
+          <h2>Click the button to show a hidden image</h2>
+          <input id="showbutton" type="button" name="show" value="show">
+          <img style="display:none" id="showimg" src="AW9A1494.jpg" alt="sarah" height="200" width="400">
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>toggle</h1>
+          <h2>Click the button to toggle an image</h2>
+          <input id="togglebutton" type="button" name="toggle" value="toggle">
+          <img id="toggleimg" src="imgres.jpg" alt="hellokitty" height="200" width="400">
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>slideUp</h1>
+          <h2>Click the button to see the text slide up</h2>
+          <input id="slideup" type="button" name="slideup" value="slideup">
+          <p class="slideup"> Lorem ipsum dolor sit amet, ignota fierent noluisse pro ea. Unum mucius sed an, quod omnium an sed. Cum alia stet dicam ne, vero saepe eu mel. Eu his vidit labores persecuti. Dolores expetenda cum ex, ad platonem tractatos necessitatibus vim.</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>slideDown</h1>
+          <h2>Click the button to see the text slide down</h2>
+          <input id="slidedown" type="button" name="slidedown" value="slidedown">
+          <p class="slidedown"> Lorem ipsum dolor sit amet, ignota fierent noluisse pro ea. Unum mucius sed an, quod omnium an sed. Cum alia stet dicam ne, vero saepe eu mel. Eu his vidit labores persecuti. Dolores expetenda cum ex, ad platonem tractatos necessitatibus vim.</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>fadeIn</h1>
+          <h2>Click the button to reveal your prize</h2>
+          <input id="fadein" type="button" name="fadein" value="fadein">
+          <img id="cake" style="display:none" src="cake.gif" alt="cake" height="200" width="200" >
+        </div>
+        <div class="line"></div>
+        <div class="row">
+          <h1>before</h1>
+          <h2>Click the button to complete the sentence</h2>
+          <input id="before" type="button" name="none" value=" ">
+          <p class="before"> coffee</p>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

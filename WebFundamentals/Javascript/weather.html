@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    // create variable that stores city name from input using .val()
+    // create variable that will have the API url and the newly created variable and the API key ID
+    // click function on the button that $.gets the json data from varible 'result' (which has the specific url corresponding to whatever city was inputed)
+    //   within that click function we need to place the json data in the empty 'search-result div' with .html() and the proper html formatting
+
+      $(document).ready(function(){
+        // $('form').submit(function(){
+        $(document).on("click", ".btn", function() {
+          var city = $("input").val();
+          var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+          var key = "&&appid=1bbea678c57747f78fab92e7893257cc"
+          $.get(url + city + key, function(res){
+            temp = res.main.temp;
+            temp = (temp * (9/5) - 459.67).toFixed(1);
+            name = res.name;
+            $(".search-result").html("<h1>" + name + "</h1><h2>Temperature:" + temp + "  &degF" + "</h2>");
+          }, "json");
+          return false;
+          // console.log(name);
+          // console.log(temp);
+
+        
+
+        });
+
+
+       });
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="search" action="index.html" method="post">
+        <input class="city" type="text" name="input" placeholder="Enter a City">
+        <button class="btn" type="button" name="button">Search Weather</button>
+      </form>
+      <div class="search-result">
+        <!--need h1 tag displaying the city searched-->
+        <!-- need <p>Temperature: (var that presents data from json)</p> -->
+      </div>
+  </div>
+  </body>
+</html>
+
+<!-- 1bbea678c57747f78fab92e7893257cc -->

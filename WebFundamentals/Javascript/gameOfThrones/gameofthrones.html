@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      // funtion with a loop that generates the infomation relevant to create each unique url
+      //img click function that appends info to the empty 'details' container
+        //using proper object calling and html
+      $(document).ready(function(){
+        var stark = "https://anapioficeandfire.com/api/houses/362";
+        var tar = "https://anapioficeandfire.com/api/houses/378";
+        var lann = "https://anapioficeandfire.com/api/houses/229";
+        var bar = "https://anapioficeandfire.com/api/houses/17";
+        $(document).on("click", "img", function(){
+          var id = $(this).attr("id");
+          $.get("https://anapioficeandfire.com/api/houses/" + id, function(res){
+            var name = res.name;
+            var region = res.region;
+            var words = res.words;
+            var titles = res.titles
+            var coat = res.coatOfArms;
+            $(".details").html("<h1>House Details</h1><ul><li>Name:  " + name + "</li><li>Region:  " + region + "</li><li>Words:  " + words + "</li><li>Titles:  " + titles + "</li><li>Coat of arms:  " + coat);
+          }, "json");
+          });
+
+        });
+
+
+
+    </script>
+  </head>
+  <style media="screen">
+    .container {
+      width: auto;
+      height: auto;
+      background-color: grey;
+    }
+    img {
+      height: 250px;
+      width: 300px;
+    }
+    .lannister img {
+      height: 169px;
+      width: 300px;
+    }
+
+    .houses img {
+      height: 25%;
+      width: 20%;
+      display: inline-block;
+      margin-right: 50px;
+      border: 5px solid black;
+      position: relative;
+      left: 20px;
+
+    }
+    .details {
+      border: 5px double black;
+      height: 300px;
+      width: 600px;
+      margin-top: 50px;
+      position: relative;
+      left: 350px;
+      padding: 5px;
+      background-color: white;
+    }
+    .details h1 {
+
+      font-size: 26px;
+      font-family: fantasy;
+      border-bottom: 1px solid black;
+    }
+    .details ul {
+      list-style: none;
+    }
+    .details li {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="houses">
+        <img id="362" src="stark.jpg" alt="stark"></img>
+        <img id="378" src="targaryen.jpg" alt="targaryen"></img>
+        <img id="229" class="lannister" src="lannister.jpg" alt="lannister"></img>
+        <img id="17" src="baratheon.png" alt="baratheon"></img>
+      </div>
+      <div class="details">
+        <h1>House Details</h1>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".button").click(function(){
+          var firstname = $(".datafirst").val();
+          var lastname = $(".datalast").val();
+          var email = $(".dataemail").val();
+          var contact = $(".datacontact").val();
+          var data = "<tr><td>" + firstname + "</td><td>" + lastname + "</td><td>" + email + "</td><td>" + contact + "</td></tr>";
+          $("#tbody").append(data);
+        });
+
+      });
+
+    </script>
+  </head>
+  <style media="screen">
+  * {
+    font-family: sans-serif;
+  }
+    .container {
+      width: 100%;
+      height: 500px;
+    }
+    table {
+      width: 500px;
+      border: 1px solid black;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      margin-bottom: 10px;
+    }
+    .line{
+      height: 1px;
+      width: 500px;
+      background: black;
+      border-bottom: 1px solid black;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+    #tbody {
+      text-align: center;
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <th id="firstname">Fist Name</th>
+          <th id="lastname">Last Name</th>
+          <th id="email">Email Address</th>
+          <th id="contact">Contact #</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+      <h1>Add User</h1>
+      <div class="line"></div>
+      <form class="form">
+        First name:  <input class="datafirst" type="text" name="firstname" placeholder="First Name"><br>
+        Last name:  <input class="datalast" type="text" name="lastname" placeholder="Last Name"><br>
+        Email Address:  <input class="dataemail" type="text" name="email" placeholder="Email Address"><br>
+        Contact No.:  <input class="datacontact" type="text" name="phone" placeholder="Phone #"><br>
+        <input class="button" type="button" name="add" value="Add User">
+      </form>
+    </div>
+  </body>
+</html>

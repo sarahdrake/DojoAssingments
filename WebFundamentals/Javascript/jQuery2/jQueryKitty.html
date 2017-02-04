@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery2</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("img").click(function(){
+        $(this).css("visibility","hidden");
+      });
+      $("input").click(function(){
+        $("img").css("visibility","visible");
+      });
+    });
+
+    </script>
+    <style media="screen">
+      img {
+        height: 180px;
+        width: 172px;
+        margin: 20px;
+        position: relative;
+        left: 100px;
+      }
+      .container {
+        width: 100%;
+        display: inline-block;;
+      }
+      h1 {
+        margin: 20px;
+      }
+      input {
+        height: 50px;
+        width: 100px;
+        background-color: pink;
+        border-radius: 15px;
+        font-size: 12px;
+    
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>hello-goodbye-kitty</h1>
+      <div class="row1">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+      </div>
+      <div class="block2">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+        <img src="hellokitty2.gif" alt="hellokitty">
+      </div>
+      <input type="button" name="Restore" value="Restore">
+    </div>
+  </body>
+</html>

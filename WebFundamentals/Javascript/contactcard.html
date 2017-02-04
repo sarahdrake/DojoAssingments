@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(document).on("click", ".button", function(){
+          var firstname = $(".datafirst").val();
+          var lastname = $(".datalast").val();
+          var description = $(".datadescription").val();
+          var data = "<div><h1>" + firstname + "  " + lastname + "</h1><p>" + description + "</p></div>";
+          $("#contactcard").append(data);
+
+      });
+
+
+    });
+
+    </script>
+    <style media="screen">
+      .container {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+      .name {
+        margin-bottom: 10px;
+      }
+      textarea {
+        margin-top: 20px;
+      }
+      form {
+        margin-top: 50px;
+        display: inline-block;
+      }
+      #contactcard {
+        height: 250px;
+        width: 350px;
+        border: 10px double pink;
+        display: block;
+        margin-left: 700px;
+        position: relative;
+        bottom: 220px;
+        margin-bottom: 15px;
+        text-align: center;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" action="index.html" method="post">
+        First name:   <input class="datafirst" type="text" name="firstname" placeholder="first name"><br>
+        Last name:   <input class="datalast" type="text" name="lasttname" placeholder="last name"><br>
+        <textarea class="datadescription" name="description" rows="8" cols="80" placeholder="Please provide a brief description"></textarea><br>
+        <input class="button" type="button" name="adduser" value="Add User"><br>
+      </form>
+      <div id="contactcard" class="contactcard1"></div>
+      </div>
+  </body>
+</html>
