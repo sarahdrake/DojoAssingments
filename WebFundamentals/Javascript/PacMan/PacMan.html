@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pac Man</title>
+    <style type="text/css">
+      body {
+        background-color: #CCFFFF;
+      }
+
+      div.row div{
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+      }
+
+      div.brick {
+        background-color: pink;
+      }
+      div.coin {
+        background: url("fruit.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      div.dino {
+        background: url("dino.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+    </style>
+</head>
+<body>
+
+      <div id='world'></div>
+
+      <script type="text/javascript">
+
+
+      var world = [
+        [2,2,2,2,2,2,2,2,2,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,1,1,1,1,1,1,1,1,2,],
+        [2,2,2,2,2,2,2,2,2,2,]
+      ];
+      function displayWorld(){
+        var output = "";
+        for(var i = 0; i < world.length; i++){
+          output += "<div class='row'>";
+          for(var j = 0; j < world[i].length; j++ ){
+            if(world[i][j] == 2)
+            output += "\n\t<div class='brick'></div>";
+
+            else if(world[i][j] == 1)
+            output += "\n\t<div class='coin'></div>";
+
+            if(world[i][j] == 0)
+            output += "\n\t<div class='empty'></div>";
+          }
+          output += "</div>";
+        }
+        console.log(output);
+        document.getElementById('world').innerHTML = output;
+      }
+
+      displayWorld();
+    </script>
+
+
+
+</body>
+</html>

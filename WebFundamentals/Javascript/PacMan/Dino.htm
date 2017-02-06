@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)file:///Users/sarahdrake/Desktop/DojoAssingments/WebFundamentals/Javascript/PacMan/dino.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Dino</title>
+    <style type="text/css">
+    body {
+      background-color: #CCFFFF;
+      margin: 0px;
+    }
+
+    div.row div{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      padding: 1px;
+      margin-top: -5px;
+    }
+
+    div.brick {
+      background-color: pink;
+      border-color: 1px solid #CCFFFF;
+    }
+    div.coin {
+      background: url("fruit.gif");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    div.empty {
+
+
+    }
+    div#dino {
+      background: url("dino.gif");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="world"><div class="row"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="coin"></div><div class="brick"></div></div><div class="row"><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div><div class="brick"></div></div></div>
+
+      <div id="dino" style="top: 5px; left 5px;"></div>
+    </div>
+
+
+    <script type="text/javascript">
+
+    var world = [
+      [2,2,2,2,2,2,2,2,2,2,2],
+      [2,1,1,2,1,1,1,1,1,1,2],
+      [2,1,1,2,1,1,2,2,2,1,2],
+      [2,1,1,2,1,1,2,1,2,1,2],
+      [2,1,1,2,1,1,2,1,2,1,2],
+      [2,1,1,2,1,1,2,1,2,1,2],
+      [2,1,1,2,2,2,2,1,2,1,2],
+      [2,1,1,1,1,1,1,1,2,1,2],
+      [2,1,1,1,1,1,1,1,1,1,2],
+      [2,2,2,2,2,2,2,2,2,2,2]
+    ];
+
+    function displayWorld(){
+      var output = '';
+      for(var i=0; i<world.length; i++){
+        output+= "<div class='row'>";
+        for(var j=0; j<world[i].length; j++){
+          if(world[i][j] == 2)
+            output += "<div class='brick'></div>";
+          else if(world[i][j] == 1)
+            output += "<div class='coin'></div>";
+          if(world[i][j] == 0)
+            output += "<div class='empty'></div>";
+        }
+        output += "</div>";
+      }
+      console.log(output);
+      document.getElementById('world').innerHTML = output;
+    }
+
+    displayWorld();
+
+    document.onKeyDown = function(e){
+      console.log(e);
+    }
+
+    </script>
+
+  
+
+</body></html>
