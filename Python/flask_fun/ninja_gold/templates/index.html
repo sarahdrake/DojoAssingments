@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+      <link rel="stylesheet"type="text/css"href="{{url_for('static',filename='my_style_sheet.css') }}">
+  </head>
+  <body>
+    <div class="bank">
+      <input type="text" name="bank" value="{{session['gold']}}">Your Gold:</div>
+    <div class="location">
+      <h1>Farm</h1>
+      <h4>(earns 10-20 golds)</h4>
+      <form class="farm" action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="location">
+      <h1>Cave</h1>
+      <h4>(earns 5-10 golds)</h4>
+      <form class="cave" action="/process_money" method="post">
+        <input type="hidden" name="building" value="cave">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="location">
+      <h1>House</h1>
+      <h4>(earns 2-5 golds)</h4>
+      <form class="house" action="/process_money" method="post">
+        <input type="hidden" name="building" value="house">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="location">
+      <h1>Casino</h1>
+      <h4>(earns/takes 0-50 golds)</h4>
+      <form class="casino" action="/process_money" method="post">
+        <input type="hidden" name="building" value="casino">
+        <input type="submit" value="Find Gold!">
+      </form>
+      <div class="log">
+        Activities: <textarea name="log" rows="8" cols="80">{{session['log']}}</textarea>
+    </div>
+  </body>
+</html>

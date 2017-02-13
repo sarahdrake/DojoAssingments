@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>This is a Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='my_style_sheet.css') }}">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script> -->
+  </head>
+  <body>
+    <form class="form" action="index.html" method="post">
+      <ul>
+        <li>First Name:<input type="text" name="firstname" placeholder="First Name"></li>
+        <li>Last Name:<input type="text" name="lastname" placeholder="Last Name"></li>
+        <li>Email Address:<input type="text" name="email" placeholder="Email Address"></li>
+        <button type="button" name="button">Submit!</button>
+    </ul>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+1) pip install Django
+  pip is a package management system used to install and manage software packages written in Python.
+  Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+2) pip list
+  List installed packages, including editables. Packages are listed in a case-insensitive sorted order
+3) pip install Django
+    Collecting Django
+    Downloading Django-1.10.5-py2.py3-none-any.whl (6.8MB)
+      100% |████████████████████████████████| 6.8MB 129kB/s
+    Installing collected packages: Django
+    Successfully installed Django-1.10.5
+4) pip freeze
+  lists the packages in the requirements format. They need to be in a specific format for pip to understand so the notation includes a ==
+5) pip freeze > requirements.txt
+  ls
+  Listed everything in my Desktop which means that the requirement.txt must not actually be located on my Desktop. I searched for it on the GUI and this was what it contained: All the packages I have installed and their versions.
+  click==6.7
+  Django==1.10.5
+  Flask==0.12
+  itsdangerous==0.24
+  Jinja2==2.9.5
+  MarkupSafe==0.23
+  Werkzeug==0.11.15
+6) pip uninstall Django
+7) pip show Django
+  Is supposed to show information about installed packages but because I just uninstalled Django, nothing appeared
+8) pip search Flask
+  Searches for PyPI packages whose name or summary contains <query>.

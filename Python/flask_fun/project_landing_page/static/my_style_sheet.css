@@ -1,0 +1,15 @@
+.form {
+  margin-bottom: 100px;
+  position: relative;
+  left: 50px;
+  top: 50px;
+
+}
+li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+button {
+  background-color: pink;
+  border-radius: 10px;
+}

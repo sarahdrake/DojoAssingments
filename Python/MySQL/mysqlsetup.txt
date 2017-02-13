@@ -1,0 +1,13 @@
+select * from follows;
+select * from faves;
+select * FROM tweets;
+select first_name FROM users;
+select first_name, last_name fROM users;
+select first_name FROM users WHERE id = 2 OR id = 3;
+SELECT * FROM users WHERE id > 2;
+SELECT * FROM users WHERE first_name LIKE "%e";
+SELECT * FROM users ORDER BY birthday DESC;
+SELECT * FROM users ORDER BY birthday ASC;
+SELECT * FROM users wHERE first_name LIKE "%e" ORDER BY birthday DESC;
+USE twitter;
+SELECT LENGTH(last_name) AS last_len FROM users;

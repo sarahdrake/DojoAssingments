@@ -1,0 +1,11 @@
+.form {
+  border: none;
+}
+body {
+  text-align: center;
+}
+.high .low .win {
+  border: 1 px solid pink;
+  height: 200px;
+  width: 200px;
+}

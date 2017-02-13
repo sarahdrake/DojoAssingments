@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Email Validation with DB</title>
+</head>
+<body>
+  <h1>Thank you for entering your email!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form action='/success' method='GET'>
+    Email:<input type="text" name="email">
+    <input type="submit" value="Submit">
+  </form>
+  <p>Email Addresses Entered</p>
+  {% for email in all_users_emails %}
+    <p>{{email['email']}}{{email['created_at']}}</p>
+  {% endfor %}
+</body>
+</html>

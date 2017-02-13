@@ -1,0 +1,23 @@
+1) entered in wrong port number:
+super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+
+The error (2003) Can't connect to MySQL server on 'server' (10061) indicates that the network connection has been refused. You should check that there is a MySQL server running, that it has network connections enabled, and that the network port you specified is the one configured on the server.
+
+**Make sure you have entered the correct port number. Check MySQL
+
+2) Entered 'twitter' in database instead of 'db'
+
+File "/Users/sarahdrake/Desktop/DojoAssingments/Python/flask_MySQL/mysqlconnection.py", line 27, in MySQLConnector
+   return MySQLConnection(app, db)
+ File "/Users/sarahdrake/Desktop/DojoAssingments/Python/flask_MySQL/mysqlconnection.py", line 7, in __init__
+   'database': twitter,
+NameError: global name 'twitter' is not defined
+
+**Make sure you either enter 'db'
+
+3) entered wrong password
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+**Make sure if you are using root- use root as the password
