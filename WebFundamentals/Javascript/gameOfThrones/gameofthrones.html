@@ -9,13 +9,19 @@
       //img click function that appends info to the empty 'details' container
         //using proper object calling and html
       $(document).ready(function(){
-        var stark = "https://anapioficeandfire.com/api/houses/362";
-        var tar = "https://anapioficeandfire.com/api/houses/378";
-        var lann = "https://anapioficeandfire.com/api/houses/229";
-        var bar = "https://anapioficeandfire.com/api/houses/17";
+        // var stark = "https://anapioficeandfire.com/api/houses/362";
+        // var tar = "https://anapioficeandfire.com/api/houses/378";
+        // var lann = "https://anapioficeandfire.com/api/houses/229";
+        // var bar = "https://anapioficeandfire.com/api/houses/17";
         $(document).on("click", "img", function(){
           var id = $(this).attr("id");
+
+
+
           $.get("https://anapioficeandfire.com/api/houses/" + id, function(res){
+
+
+
             var name = res.name;
             var region = res.region;
             var words = res.words;

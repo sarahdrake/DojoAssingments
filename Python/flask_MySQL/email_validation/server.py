@@ -10,17 +10,19 @@ def index():
     return render_template('index.html')
 @app.route('/process', methods=['POST'])
 def submit():
-    if not EMAIL_REGEX.match(request.form['email']):
+    if len(request.form['email']) < 1:
+        flash("Email cannot be blank!")
+    elif not EMAIL_REGEX.match(request.form['email']):
         flash("Invalid Email Address!")
-        return redirect('/')
+    return redirect('/')
     else:
         flash("Success!")
-        query = 'INSERT INTO users(email, created_at) VALUES (:email, NOW())'
-        data = {'email': request.form['email']}
-        mysql.query_db(query, data)
-        print request.form['email']
-        return redirect('/success')
-@app.route('/success', methods=['GET'])
+    query = 'INSERT INTO users(email, created_at) VALUES (:email, NOW())'
+    data = {'email': request.form['email']}
+    mysql.query_db(query, data)
+    print request.form['email']
+    return redirect('/success')
+@app.route('/success', methods=['POST'])
 def success():
     query = 'SELECT * FROM users'
     users = mysql.query_db(query)
