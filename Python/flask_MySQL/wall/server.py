@@ -101,12 +101,16 @@ def write_message():
         flash("Message is too short")
     else:
         query_data = {
-            'message': message
+            'message': message,
+            'user_id': user_id
         }
-        select_query = "SELECT users.id, users.first_name, users.last_name, messages.message, messages.created_at\
-        FROM users\
-        LEFT JOIN messages\
-        ON users.id = messages.user_id"
-        insert_query = "INSERT INTO thewall.messages (message) VALUES (:message) WHERE id = :id" + str(user_id)
+        insert_query = "INSERT INTO messages (message, user_id) VALUES (:message, :user_id)"
         mysql.query_db(insert_query, query_data)
+
+    return render_template('thewall.html')
+# @app.route('/retrieve', methods=["POST"])
+#     select_query = "SELECT users.id, users.first_name, users.last_name, messages.message, messages.created_at\
+#     FROM users\
+#     LEFT JOIN messages\
+#     ON users.id = messages.user_id"
 app.run(debug=True)
